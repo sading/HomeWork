@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Globalization;
+
+
+// первобытное сознание( или менталитет )
+namespace lessons
+{
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            // Узнаем и записываем кол-во элементов
+            int Quantity_Namber = int.Parse(Console.ReadLine());
+
+            //Количество подмножеств
+            int Number_of_subsets = (int)Math.Pow(2, Quantity_Namber);
+
+            // Создаем массив "рабочих" элементов
+            int[] Multiple_Elements = new int[Quantity_Namber];
+
+
+            //сщдаем массив индексов (Далее для разбиения числа на двочную систему)
+            int[] Multiple_Index = new int[Quantity_Namber];
+
+            //Заполняем массив
+            for (int i = 0; i < Multiple_Elements.Length; i++)
+            {
+                Multiple_Elements[i] = int.Parse(Console.ReadLine());
+            }
+
+
+
+            for (int i = 0; i < Number_of_subsets; i++)
+            {
+                //Вывод пустого множества
+                if (i == 0)
+                {
+                    Console.WriteLine("0");
+                    continue;
+                }
+
+                //Перевод в двоичную систему
+                int z = 0;
+                int Number = i;
+                while (true)
+                {
+                    Multiple_Index[z] = Number % 2;
+                    Number /= 2;
+                    z++;
+
+                    if (Number == 1 || Number == 0)
+                    {
+                        Multiple_Index[z] = Number % 2;
+                        break;
+                    }
+                }
+
+                //Вывод подмножеств
+                for (int j = 0; j < Multiple_Elements.Length; j++)
+                {
+                    if (Multiple_Index[j] == 1)
+                    {
+                        Console.Write(Multiple_Elements[j] + " ");
+                    }
+                }
+                Console.WriteLine();
+
+            }
+
+        }
+    }
+}

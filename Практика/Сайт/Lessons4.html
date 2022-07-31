@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 4</title>
+	<link rel="stylesheet" href="css/main.css">
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<nav>
+		<div class="container flex justify-between items-center">
+			<a href="index.html">
+				<img src="img/cs.svg" alt="" height="50px">
+			</a>
+			<form action="">
+				<label for="">
+					<input type="text">
+					<button>Найти</button>
+				</label>
+			</form>
+			<a href="Polez.html"><button> Полезные материалы</button></a>
+		</div>
+	</nav>
+		
+		<section class="container">
+			<h2>Циклы</h2>
+			<p>
+<p>Циклы являются управляющими конструкциями, позволяя в зависимости от определенных условий выполнять некоторое действие множество раз. В C# имеются следующие виды циклов:</p>
+<ul>
+	<li>for</li>
+	<li>foreach</li>
+	<li>while</li>
+	<li>do...while</li>
+</ul>
+
+<h3>Цикл for</h3>
+<p>Цикл for имеет следующее формальное определение:</p>
+<pre class="precode">
+			<code>for ([действия до выполнения цикла]; [условие]; [действия после выполнения иттерации])
+{
+    // действия
+}</code>
+		</pre>
+
+<p>Объявление цикла for состоит из трех частей. Первая часть объявления цикла - некоторые действия, которые выполняются один раз до выполнения цикла. Обычно здесь определяются переменные, которые будут использоваться в цикле.
+Вторая часть - условие, при котором будет выполняться цикл. Пока условие равно true, будет выполняться цикл.
+И третья часть - некоторые действия, которые выполняются после завершения блока цикла. Эти действия выполняются каждый раз при завершении блока цикла.
+После объявления цикла в фигурных скобках помещаются сами действия цикла.</p>
+
+<h3>Цикл do..while</h3>
+<p>В цикле do сначала выполняется код цикла, а потом происходит проверка условия в инструкции while. И пока это условие истинно, цикл повторяется.
+</p>
+<pre class="precode">
+			<code>do
+{
+    действия цикла
+}
+while (условие)</code>
+		</pre>
+
+<h3>Цикл while</h3>
+<p>В отличие от цикла do цикл while сразу проверяет истинность некоторого условия, и если условие истинно, то код цикла выполняется:
+</p>
+<pre class="precode">
+			<code>while (условие)
+{
+    действия цикла
+}
+</code>
+		</pre>
+
+<h3>Цикл foreach</h3>
+
+<p>Цикл foreach предназначен для перебора набора или коллекции элементов. Его общее определение:
+</p>
+<pre class="precode">
+			<code>foreach(тип данных переменная in коллекция)
+{
+    // действия цикла
+}</code>
+		</pre>
+
+<p>После оператора foreach в скобках сначала идет определение переменной. Затем ключевое слово in и далее коллекция, элементы которой надо перебрать.
+При выполнении цикл последовательно перебирает элементы коллекции и помещает их в переменную, и таким образом в блоке цикла мы можем выполнить с ними некоторые действия.
+Например, возьмем строку. Строка по сути - это коллекция символов. И .NET позволяет перебрать все элементы строки - ее символы с помощью цикла foreach.
+</p>
+<pre class="precode"><code>foreach(char c in "Tom")
+{
+    Console.WriteLine(c);
+}
+</code></pre>
+
+<h3>Вложенные циклы</h3>
+<p>Одни циклы могут быть вложенными в другие.<br>Например:</p>
+<pre class="precode">
+			<code>for (int i = 1; i < 10; i++)
+{
+    for (int j = 1; j < 10; j++)
+    {
+        Console.Write($"{i * j} \t");
+    }
+    Console.WriteLine();
+}</code>
+		</pre>
+</p>
+		</section>
+
+		<section class="container">
+			<h2>Видеоресурсы по теме урока</h2>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/kIefPK7mQxk?list=PLIIXgDT0bKw4OmiZ9yGmShKsY0XncViZ8" title="Циклы C# (for, foreach, while) - Учим Шарп #7" frameborder="0" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/NZPr9ucAj7I?list=PLQOaTSbfxUtD6kMmAYc8Fooqya3pjLs1N" title="ЦИКЛ DO WHILE | ЧТО ЭТО | КАК РАБОТАЕТ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ | # 17" frameborder="0" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/KCv5gNkbS9c?list=PLQOaTSbfxUtD6kMmAYc8Fooqya3pjLs1N" title="ВЛОЖЕННЫЕ ЦИКЛЫ  | КАК РАБОТАЮТ | ПРИМЕР | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ | # 22" frameborder="0" allowfullscreen></iframe>
+		</section>
+
+	<footer>
+		<div class="container flex gap">
+			<a href="Lessons1.html"><button>Перейти к уроку 1</button></a>
+			<a href="Lessons2.html"><button>Перейти к уроку 2</button></a>
+			<a href="Lessons3.html"><button>Перейти к уроку 3</button></a>
+			<a href="Lessons4.html"><button>Перейти к уроку 4</button></a>
+			<a href="Test4.html"><button>Пройти тест</button></a>
+		</div>
+	</footer>
+</body>
+</html>

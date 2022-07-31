@@ -1,0 +1,16 @@
+C:\Users\я\Desktop\MOP\LB_MOP_2\bin\Debug\LB_MOP_2.exe.config
+C:\Users\я\Desktop\MOP\LB_MOP_2\bin\Debug\LB_MOP_2.exe
+C:\Users\я\Desktop\MOP\LB_MOP_2\bin\Debug\LB_MOP_2.pdb
+C:\Users\я\Desktop\MOP\LB_MOP_2\obj\Debug\LB_MOP_2.csproj.AssemblyReference.cache
+C:\Users\я\Desktop\MOP\LB_MOP_2\obj\Debug\LB_MOP_2.csproj.SuggestedBindingRedirects.cache
+C:\Users\я\Desktop\MOP\LB_MOP_2\obj\Debug\LB_MOP_2.csproj.CoreCompileInputs.cache
+C:\Users\я\Desktop\MOP\LB_MOP_2\obj\Debug\LB_MOP_2.exe
+C:\Users\я\Desktop\MOP\LB_MOP_2\obj\Debug\LB_MOP_2.pdb
+C:\Users\я\Desktop\ДЗ делается\MOP\LB_MOP_2\bin\Debug\LB_MOP_2.exe.config
+C:\Users\я\Desktop\ДЗ делается\MOP\LB_MOP_2\bin\Debug\LB_MOP_2.exe
+C:\Users\я\Desktop\ДЗ делается\MOP\LB_MOP_2\bin\Debug\LB_MOP_2.pdb
+C:\Users\я\Desktop\ДЗ делается\MOP\LB_MOP_2\obj\Debug\LB_MOP_2.csproj.AssemblyReference.cache
+C:\Users\я\Desktop\ДЗ делается\MOP\LB_MOP_2\obj\Debug\LB_MOP_2.csproj.SuggestedBindingRedirects.cache
+C:\Users\я\Desktop\ДЗ делается\MOP\LB_MOP_2\obj\Debug\LB_MOP_2.csproj.CoreCompileInputs.cache
+C:\Users\я\Desktop\ДЗ делается\MOP\LB_MOP_2\obj\Debug\LB_MOP_2.exe
+C:\Users\я\Desktop\ДЗ делается\MOP\LB_MOP_2\obj\Debug\LB_MOP_2.pdb

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Тест 4</title>
+	<link rel="stylesheet" href="css/main.css">
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<script src="js/test4.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<nav>
+		<div class="container flex justify-between items-center">
+			<a href="index.html">
+				<img src="img/cs.svg" alt="" height="50px">
+			</a>
+			<form action="">
+				<label for="">
+					<input type="text">
+					<button>Найти</button>
+				</label>
+			</form>
+			<a href="Polez.html"><button> Полезные материалы</button></a>
+		</div>
+	</nav>
+
+	<form action="#" method="get">
+	<section class="container">
+		<p>Вопрос 1</p>
+		<p>Какие циклы могут быть бесконечными?</p>
+		<div>
+			<input type="checkbox" id="1_1" name="1" value="yes">foreach
+		</div>
+		<div>
+			<input type="checkbox" id="1_2" name="2" value="yes">for
+		</div>
+		<div>
+			<input type="checkbox" id="1_3" name="3" value="yes">while
+		</div>
+		<div>
+			<input type="checkbox" id="1_4" name="4" value="yes">В С# нельзя сделать бесконечный цикл
+		</div>
+	</section>
+
+<section class="container">
+		<p>Вопрос 2</p>
+		<p>Чему будет равна переменная s?</p>
+
+		<section class="container">
+		<pre class="precode"><code>int n, s;
+n = 3, s = 0;
+while (n <= 7)
+{
+s = s + n;
+n = n + 1;
+}</code>
+		</pre>
+	</section>
+
+		<div>
+			<input type="checkbox" id="2_1" name="5" value="yes">25
+		</div>
+		<div>
+			<input type="checkbox" id="2_2" name="6" value="yes">7
+		</div>
+		<div>
+			<input type="checkbox" id="2_3" name="7" value="yes">0
+		</div>
+		<div>
+			<input type="checkbox" id="2_4" name="8" value="yes">10
+		</div>
+	</section>
+
+	<section class="container">
+		<p>Вопрос 3</p>
+		<p>Какие циклы порверяют истинность некоторого значения для продолжения своей работы?</p>
+
+		<div>
+			<input type="checkbox" id="3_1" name="9" value="yes">for
+		</div>
+		<div>
+			<input type="checkbox" id="3_2" name="10" value="yes">foreach
+		</div>
+		<div>
+			<input type="checkbox" id="3_3" name="11" value="yes">while
+		</div>
+		<div>
+			<input type="checkbox" id="3_4" name="12" value="yes">do..while
+		</div>
+		<div>
+			<input type="checkbox" id="3_5" name="13" value="yes">goto
+		</div>
+	</section>
+
+		<section class="container">
+		<p>Вопрос 4</p>
+		<p>Чему будет равна переменная s в результате запуска программы?</p>
+
+		<section class="container">
+		<pre class="precode"><code>int n, s;
+n = 1;
+s = 0;
+while (n <= 300)
+{
+s = s + 30;
+n = n * 3;
+}</code>
+		</pre>
+	</section>
+
+		<div>
+			<input type="checkbox" id="4_1" name="14" value="yes">180
+		</div>
+		<div>
+			<input type="checkbox" id="4_2" name="15" value="yes">160
+		</div>
+		<div>
+			<input type="checkbox" id="4_3" name="16" value="yes">200
+		</div>
+		<div>
+			<input type="checkbox" id="4_4" name="17" value="yes">120
+		</div>
+	</section>
+
+		<section class="container">
+		<p>Вопрос 5</p>
+		<p>Какой из перечисленных циклов используется только для перебора элементов коллекции в C#?</p>
+		<div>
+			<input type="checkbox" id="5_1" name="18" value="yes">for
+		</div>
+		<div>
+			<input type="checkbox" id="5_2" name="19" value="yes">while
+		</div>
+		<div>
+			<input type="checkbox" id="5_3" name="20" value="yes">goto
+		</div>
+		<div>
+			<input type="checkbox" id="5_4" name="21" value="yes">foreach
+		</div>
+	</section>
+
+	<section class="container flex gap">
+		<button onclick="getAnswers(); fun1();" class="container gap">Проверка</button>
+	</section>
+	
+		</form>
+
+	<footer>
+		<div class="container flex gap">
+			<a href="Lessons1.html"><button>Перейти к уроку 1</button></a>
+			<a href="Lessons2.html"><button>Перейти к уроку 2</button></a>
+			<a href="Lessons3.html"><button>Перейти к уроку 3</button></a>
+			<a href="Lessons4.html"><button>Перейти к уроку 4</button></a>
+		</div>
+	</footer>
+</body>
+</html>

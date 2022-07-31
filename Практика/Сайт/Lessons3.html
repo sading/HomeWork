@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 3</title>
+	<link rel="stylesheet" href="css/main.css">
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<nav>
+		<div class="container flex justify-between items-center">
+			<a href="index.html">
+				<img src="img/cs.svg" alt="" height="50px">
+			</a>
+			<form action="">
+				<label for="">
+					<input type="text">
+					<button>Найти</button>
+				</label>
+			</form>
+			<a href="Polez.html"><button> Полезные материалы</button></a>
+		</div>
+	</nav>
+		
+		<section class="container">
+			<p>Конструкция if..else</p>
+			<p>Условные конструкции - один из базовых компонентов многих языков программирования, которые направляют работу программы по одному из путей в зависимости от определенных условий. Одной из таких конструкций в языке программирования C# является конструкция if..else.<br>Конструкция if/else проверяет истинность некоторого условия и в зависимости от результатов проверки выполняет определенный код.</p>
+			<p>Ее простейшая форма состоит из блока if:</p>
+					<pre class="precode">
+			<code>if(условие)
+{
+    выполняемые инструкции
+}
+</code>
+		</pre>
+<p>После ключевого слова if ставится условие. Условие должно представлять значение типа bool. Это может быть непосредственно значение типа bool или результат условного выражения или другого выражения, которое возвращает значение тиа bool. И если это условие истинно (равно true), то срабатывает код, который помещен далее после условия внутри фигурных скобок.
+Выражение else</p>
+<p>Но что, если мы захотим, чтобы при несоблюдении условия также выполнялись какие-либо действия? В этом случае мы можем добавить блок else.
+</p>
+<pre class="precode">
+			<code>if(условие)
+{
+    выполняемые инструкции
+}
+else
+{
+    выполняемые инструкции
+}</code>
+		</pre>
+
+<p>Блок else выполняется, если условие после if ложно, то есть равно false. Если блок else содержит только одну инструкцию, то опять же мы можем его сократить, убрав фигурные скобки. Если у нас идет множество проверок, то в этом случае можно использовать конструкцию  else if <br>Пример:</p>
+
+<pre class="precode">
+			<code>string name = "Alex";
+
+if (name == "Tom")
+    Console.WriteLine("Вас зовут Tomas");
+else if (name == "Bob")
+    Console.WriteLine("Вас зовут Robert");
+else if (name == "Mike")
+    Console.WriteLine("Вас зовут Michael");
+else
+    Console.WriteLine("Неизвестное имя");</code>
+		</pre>
+
+<h2>Тернарная операция</h2>
+<p>Тернарную операция также позволяет проверить некоторое условие и в зависимости от его истинности выполнить некоторые действия. Она имеет следующий синтаксис:</p>
+<pre class="precode">
+			<code>[первый операнд - условие] ? [второй операнд] : [третий операнд]</code>
+		</pre>
+<p>
+Здесь сразу три операнда. В зависимости от условия тернарная операция возвращает второй или третий операнд: если условие равно true, то возвращается второй операнд; если условие равно false, то третий.
+</p>
+		</section>
+
+<section class="container">
+	<h2>Видеоресурсы по теме урока</h2>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/qrPuaaVGEp4?list=PLQOaTSbfxUtD6kMmAYc8Fooqya3pjLs1N" title="IF ELSE C# | КОНСТРУКЦИЯ ЛОГИЧЕСКОГО ВЫБОРА | ВЕТВЛЕНИЕ В C# | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ | # 13" frameborder="0" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/iQhVp4TGf64?list=PLQOaTSbfxUtD6kMmAYc8Fooqya3pjLs1N" title="ТЕРНАРНЫЙ ОПЕРАТОР | ЧТО ЭТО | ПРИМЕР | КАК ИСПОЛЬЗОВАТЬ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ | # 23" frameborder="0" allowfullscreen></iframe>
+</section>
+
+	<footer>
+		<div class="container flex gap">
+			<a href="Lessons1.html"><button>Перейти к уроку 1</button></a>
+			<a href="Lessons2.html"><button>Перейти к уроку 2</button></a>
+			<a href="Lessons3.html"><button>Перейти к уроку 3</button></a>
+			<a href="Lessons4.html"><button>Перейти к уроку 4</button></a>
+			<a href="Test3.html"><button>Пройти тест</button></a>
+		</div>
+	</footer>
+</body>
+</html>

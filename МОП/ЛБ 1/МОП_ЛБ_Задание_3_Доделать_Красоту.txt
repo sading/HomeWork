@@ -1,0 +1,239 @@
+using System;
+
+
+namespace lessons
+{
+    internal class Program
+    {
+
+        //  Пересечение множеств - порязрядное умножение (умножение i-го Элемента индекса А на i-ый элемент индекса В)
+        //  Объединение множеств - поразрядное сложение  
+        //  Дополнение(отрицание) множества А - инверсия последовательности множества А
+        static void Main(string[] args)
+        {
+
+            // Узнаем и записываем кол-во элементов множества А
+            Console.Write("Введите колличество элементов массива А - ");
+            int Quantity_Namber_A = int.Parse(Console.ReadLine());
+            // Узнаем и записываем кол-во элементов множества В
+            Console.Write("Введите количество элементов масива В - ");
+            int Quantity_Namber_B = int.Parse(Console.ReadLine());
+
+
+            int[] Plenty_A = new int[Quantity_Namber_A];
+            int[] Plenty_B = new int[Quantity_Namber_B];
+            int[] Plenty_U = new int[Plenty_A.Length + Plenty_B.Length];
+
+
+            //
+            for (int i = 0; i < Plenty_A.Length; i++)
+            {
+                Plenty_A[i] = int.Parse(Console.ReadLine());
+            }
+
+            //
+            for (int i = 0; i < Plenty_B.Length; i++)
+            {
+                Plenty_B[i] = int.Parse(Console.ReadLine());
+            }
+
+
+            for (int i = 0; i < Plenty_A.Length; i++)
+            {
+                Plenty_U[i] = Plenty_A[i];
+            }
+
+            for (int i = 0; i < Plenty_B.Length; i++)
+            {
+                for (int j = 0; j < Plenty_B.Length; j++)
+                {
+                    if (Plenty_U[j] == Plenty_B[i])
+                    {
+                        break;
+                    }
+                    Plenty_U[(i + Plenty_A.Length)] = Plenty_B[i];
+                }
+            }
+            Console.WriteLine();
+            Array.Sort(Plenty_U);
+
+            for (int i = 0; i < Plenty_U.Length; i++)
+            {
+                Console.Write(Plenty_U[i] + " ");
+            }
+
+            Console.WriteLine();
+            //Перестройка универсального множества 
+            int count=0;
+            for (int i = 0; i < Plenty_U.Length; i++)
+            {
+                if (Plenty_U[i] == 0)
+                {
+                    count++;
+                }
+            }
+
+            int[] Plenty_U_Alfa = new int [(Plenty_U.Length - count)];
+            for (int i = 0; i < Plenty_U_Alfa.Length; i++)
+            {
+                Plenty_U_Alfa[i] = Plenty_U[i + count];
+            }
+
+            for (int i = 0; i < Plenty_U_Alfa.Length; i++)
+            {
+                Console.Write(Plenty_U_Alfa[i] + " ");
+            }
+            Console.WriteLine();
+
+
+            int[] Plenty_A_Index = new int[Plenty_U_Alfa.Length];
+            int[] Plenty_B_Index = new int[Plenty_U_Alfa.Length];
+            int[] Plenty_U_Index = new int[Plenty_U_Alfa.Length];
+
+            // Бинарная последовательность множества А
+
+            Console.WriteLine("Введите бинарную последовательность множества А (в формате 1100110)");
+            string Pos_A = Console.ReadLine();
+            for (int i = 0; i < Plenty_U_Alfa.Length; i++)
+            {
+                Plenty_A_Index[i] = ((Pos_A[i]) - 48);
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < Plenty_A_Index.Length; i++)
+            {
+                Console.Write(Plenty_A_Index[i]);
+            }
+
+            // Бинарная последовательность множества В
+            Console.WriteLine("Введите бинарную последовательность множества В (в формате 1100110)");
+            string Pos_B = Console.ReadLine(); ;
+            for (int i = 0; i < Plenty_U_Alfa.Length; i++)
+            {
+                Plenty_B_Index[i] = (Pos_B[i] - 48);
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < Plenty_B_Index.Length; i++)
+            {
+                Console.Write(Plenty_B_Index[i]);
+            }
+
+            //Побитовое умножение
+            for (int i = 0; i < Plenty_U_Alfa.Length; i++)
+            {
+                Plenty_U_Index[i] = (Plenty_A_Index[i] * Plenty_B_Index[i]);
+            }
+
+            // Вывод бинарного умножения
+            Console.WriteLine("Бинарный код пересечения можеств А и В");
+            for (int i = 0; i < Plenty_U_Index.Length; i++)
+            {
+                Console.Write(Plenty_U_Index[i]);
+            }
+            Console.WriteLine();
+
+            // Вывод умножения
+            Console.WriteLine("Пересечение множеств А и В");
+            for (int i = 0; i < Plenty_A.Length; i++)
+            {
+                for (int j = 0; j < Plenty_B.Length; j++)
+                {
+                    if (Plenty_A[i] == Plenty_B[j])
+                    {
+                        Console.Write(Plenty_A[i]);
+                    }
+                }
+            }
+            Console.WriteLine("\n");
+
+            //Побитовое сложение
+            for (int i = 0; i < Plenty_U_Alfa.Length; i++)
+            {
+                if (Plenty_A_Index[i] == 1 || Plenty_B_Index[i] == 1)
+                {
+                    Plenty_U_Index[i] = 1;
+                }
+                else
+                {
+                    Plenty_U_Index[i] = 0;
+                }
+            }
+
+            //Вывод бинарного сложения
+            Console.WriteLine("Бинарное сложение");
+            for (int i = 0; i < Plenty_U_Index.Length; i++)
+            {
+                Console.Write(Plenty_U_Index[i]);
+            }
+            Console.WriteLine();
+
+            //Вывод побитового сложения
+            Console.WriteLine("Объединение множеств А и В");
+            for (int i = 0; i < Plenty_U_Alfa.Length; i++)
+            {
+                if (Plenty_U_Index[i] == 1)
+                {
+                    Console.Write(Plenty_U_Alfa[i] + " ");
+                }
+            }
+            Console.WriteLine("\n");
+
+            // Побитовая иверсия А
+            for (int i = 0; i < Plenty_A_Index.Length; i++)
+            {
+                if (Plenty_A_Index[i] == 1)
+                {
+                    Plenty_A_Index[i] = 0;
+                }
+                else
+                {
+                    Plenty_A_Index[i] = 1;
+                }
+            }
+
+            // Вывод побитовой инверсии А
+            for (int i = 0; i < Plenty_A_Index.Length; i++)
+            {
+                Console.Write(Plenty_A_Index[i]);
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < Plenty_U_Alfa.Length; i++)
+            {
+                if (Plenty_A_Index[i] == 1)
+                {
+                    Console.Write(Plenty_U_Alfa[i]);
+                }
+            }
+            // Побитовая инверсия В
+            for (int i = 0; i < Plenty_B_Index.Length; i++)
+            {
+                if (Plenty_B_Index[i] == 0)
+                {
+                    Plenty_B_Index[i] = 1;
+                }
+                else
+                {
+                    Plenty_B_Index[i] = 0;
+                }
+            }
+            Console.WriteLine();
+
+            // Вывод побитовой инверсии В
+            for (int i = 0; i < Plenty_B_Index.Length; i++)
+            {
+                Console.Write(Plenty_B_Index[i]);
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < Plenty_U_Alfa.Length; i++)
+            {
+                if (Plenty_B_Index[i] == 1)
+                {
+                    Console.Write(Plenty_U_Alfa[i]);
+                }
+            }
+        }
+    }
+}

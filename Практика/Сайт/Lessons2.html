@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Урок 2</title>
+	<link rel="stylesheet" href="css/main.css">
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<nav>
+		<div class="container flex justify-between items-center">
+			<a href="index.html">
+				<img src="img/cs.svg" alt="" height="50px">
+			</a>
+			<form action="">
+				<label for="">
+					<input type="text">
+					<button>Найти</button>
+				</label>
+			</form>
+			<a href="Polez.html"><button> Полезные материалы</button></a>
+		</div>
+	</nav>
+		
+		<section class="container">
+			<h2>Операции присваивания</h2>
+			<p>
+Как и во многих других языках программирования, в C# имеется базовая операция присваивания =, которая присвоивает значение правого операнда левому операнду:
+		</p>
+		<pre class="precode">
+			<code>int number = 23;</code>
+		</pre>
+
+<p>Также можно выполнять множественно присвоение сразу нескольких переменным одновременно:</p>
+		<pre class="precode">
+			<code>
+int a, b, c;
+a = b = c = 34;</code>
+		</pre>
+
+<p>Стоит отметить, что операции присвоения имеют низкий приоритет. И вначале будет вычисляться значение правого операнда и только потом будет идти присвоение этого значения левому операнду.</p>
+		<pre class="precode">
+			<code>int a, b, c;
+a = b = c = 34 * 2 / 4;</code>
+		</pre>
+<p>Сначала будет вычисляться выражение 34 * 2 / 4, затем полученное значение будет присвоено переменным.</p>
+
+<p>Кроме базовой операции присвоения в C# есть еще ряд операций:</p>
+<ul>
+	<li>" += " - присваивание после сложения.<br>Присваивает левому операнду сумму левого и правого операндов:<br> выражение A += B равнозначно выражению A = A + B</li>
+	<li>" -= " - присваивание после вычитания.<br>Присваивает левому операнду разность левого и правого операндов:<br> A -= B эквивалентно A = A - B</li>
+	<li>" *= " - присваивание после умножения.<br>Присваивает левому операнду произведение левого и правого операндов:<br> A *= B эквивалентно A = A * B</li>
+	<li>" /= " - присваивание после деления.<br>Присваивает левому операнду частное левого и правого операндов:<br> A /= B эквивалентно A = A / B</li>
+	<li>" %= " - присваивание после деления по модулю.<br>Присваивает левому операнду остаток от целочисленного деления левого операнда на правый:<br> A %= B эквивалентно A = A % B
+</li>
+</ul>
+<p>
+	<h2>Условные выражения</h2>
+<p>Отдельный набор операций представляет условные выражения. Такие операции возвращают логическое значение, то есть значение типа bool: true, если выражение истинно, и false, если выражение ложно. К подобным операциям относятся операции сравнения и логические операции.
+Операции сравнения
+В операциях сравнения сравниваются два операнда и возвращается значение типа bool - true, если выражение верно, и false, если выражение неверно.
+</p>
+<ul>
+	<li>" == "<br>Сравнивает два операнда на равенство.<br>Если они равны, то операция возвращает true, если не равны, то возвращается false.</li>
+	<li>" != "<br>Сравнивает два операнда и возвращает true, если операнды не равны, и false, если они равны.</li>
+	<li>" < "<br>Операция "меньше чем".<br>Возвращает true, если первый операнд меньше второго, и false, если первый операнд больше второго.</li>
+	<li>" > "<br>Операция "больше чем".<br>Сравнивает два операнда и возвращает true, если первый операнд больше второго, иначе возвращает false.</li>
+	<li>" <= "<br>Операция "меньше или равно".<br>Сравнивает два операнда и возвращает true, если первый операнд меньше или равен второму. Иначе возвращает false.</li>
+	<li>" >= "<br>Операция "больше или равно".<br>Сравнивает два операнда и возвращает true, если первый операнд больше или равен второму, иначе возвращается false.</li>
+</ul>
+<p>Операции " < ", " > ", " <= ", " >= " имеют больший приоритет, чем " == " и "!= "</p>
+
+<p>Логические операции</p>
+<ul>
+	<li>" || "<br>Операция логического сложения.<br>Возвращает true, если хотя бы один из операндов возвращает true.</li>
+	<li>" && "<br>Операция логического умножения.<br>Возвращает true, если оба операнда одновременно равны true.</li>
+	<li>" ! "<br>Операция логического отрицания.<br>Производится над одним операндом и возвращает true, если операнд равен false. Если операнд равен true, то операция возвращает false.
+</li>
+</ul>
+
+Примеры:
+		<pre class="precode">
+			<code>
+int a = 10;
+int b = 4;
+bool c = a == b;    // false
+bool d = a != b;    // true
+bool e = a!=10;     // false
+bool f = a < b;     // false
+bool g = a > b;     // true
+bool h = a > 25;    // false
+bool j = a <= b;    // false
+bool k = a <= 25;   // true
+bool l = a >= b;    // true
+bool m = a >= 25;   // false
+bool n = (5 > 6) || (4 < 6); // 5 > 6 - false, 4 < 6 - true, поэтому возвращается true
+bool o = (5 < 6) && (4 < 6); // 5 < 6 - true, 4 < 6 - true, поэтому возвращается true
+bool х1 = true;
+bool х2 = !х1;         // false
+</code>
+		</pre>
+</p>
+		</section>
+
+		<section class="container">
+			<h2>Видеоресурсы по теме урока</h2>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/CyMOlixfPMA?list=PLQOaTSbfxUtD6kMmAYc8Fooqya3pjLs1N" title="ОПЕРАТОРЫ. АРИФМЕТИЧЕСКИЕ ОПЕРАЦИИ С ЧИСЛАМИ В C# | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ | Урок # 8" frameborder="0" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/sED7WmMj_E4?list=PLQOaTSbfxUtD6kMmAYc8Fooqya3pjLs1N" title="ОПЕРАЦИИ СРАВНЕНИЯ | ОПЕРАТОРЫ ОТНОШЕНИЯ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ | Урок # 12" frameborder="0" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/9o8opcKO0f0?list=PLQOaTSbfxUtD6kMmAYc8Fooqya3pjLs1N" title="ЛОГИЧЕСКИЕ ОПЕРАТОРЫ C# | СОКРАЩЁННЫЕ ЛОГИЧЕСКИЕ ОПЕРАЦИИ | C# ОТ НОВИЧКА К ПРОФЕССИОНАЛУ | # 14" frameborder="0" allowfullscreen></iframe>
+		</section>
+
+	<footer>
+		<div class="container flex gap">
+			<a href="Lessons1.html"><button>Перейти к уроку 1</button></a>
+			<a href="Lessons2.html"><button>Перейти к уроку 2</button></a>
+			<a href="Lessons3.html"><button>Перейти к уроку 3</button></a>
+			<a href="Lessons4.html"><button>Перейти к уроку 4</button></a>
+			<a href="Test2.html"><button>Пройти тест</button></a>
+		</div>
+	</footer>
+</body>
+</html>

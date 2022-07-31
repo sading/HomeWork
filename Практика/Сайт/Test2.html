@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Тест 2</title>
+	<link rel="stylesheet" href="css/main.css">
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+	<script src="js/test2.js"></script>
+</head>
+<body>
+	<nav>
+		<div class="container flex justify-between items-center">
+			<a href="index.html">
+				<img src="img/cs.svg" alt="" height="50px">
+			</a>
+			<form action="">
+				<label for="">
+					<input type="text">
+					<button>Найти</button>
+				</label>
+			</form>
+			<a href="Polez.html"><button> Полезные материалы</button></a>
+		</div>
+	</nav>
+		<form action="#" method="get">
+			<section class="container">
+			<p>Вопрос 1</p>
+			<p>Какие из представленных операций относятся к логическим?</p>
+			<div>
+				<input type="checkbox" id="2_1_1" name="1" value="yes">"++"
+			</div>
+			<div>
+				<input type="checkbox" id="2_1_2" name="2" value="yes">"--"
+			</div>
+			<div>
+				<input type="checkbox" id="2_1_3" name="3" value="yes">"&&"
+			</div>
+			<div>
+				<input type="checkbox" id="2_1_4" name="4" value="yes">"%="
+			</div>
+			<div>
+				<input type="checkbox" id="2_1_5"name="5" value="yes">"||"
+			</div>
+	</section>
+
+<section class="container">
+			<p>Вопрос 2</p>
+			<p>Какие из перечисленных операций возвращают свим значением true или false?</p>
+
+			<div>
+				<input type="checkbox" id="2_2_1" name="6" value="yes">"=="
+			</div>
+			<div>
+				<input type="checkbox" id="2_2_2" name="7" value="yes">"="
+			</div>
+			<div>
+				<input type="checkbox" id="2_2_3" name="8" value="yes">"!="
+			</div>
+			<div>
+				<input type="checkbox" id="2_2_4" name="9" value="yes">"+"
+			</div>
+			<div>
+				<input type="checkbox" id="2_2_5" name="10" value="yes">"*"
+			</div>
+	</section>
+
+	<section class="container">
+		<p>Вопрос 3</p>
+		<p>В результате программы чему будет равна переменная х?</p>
+
+		<section class="container">
+		<pre class="precode"><code>bool x = (12 < 5) || (3 == 5) && (6 != 0);</code>
+		</pre>
+	</section>
+
+		<div>
+			<input type="checkbox" id="2_3_1" name="11" value="yes">true
+		</div>
+		<div>
+			<input type="checkbox" id="2_3_2" name="12" value="yes">false
+		</div>
+		<div>
+			<input type="checkbox" id="2_3_3" name="13" value="yes">ошибка компиляции
+		</div>
+		<div>
+			<input type="checkbox" id="2_3_4" name="14" value="yes">4
+		</div>
+	</section>
+
+		<section class="container">
+		<p>Вопрос 4</p>
+		<p>В результате программы чему будет равна переменная х?</p>
+
+		<section class="container">
+		<pre class="precode"><code>int x = 0;
+int a = 4;
+int c = 5;
+c += a;
+x *= c;
+x = a;</code>
+		</pre>
+	</section>
+
+		<div>
+			<input type="checkbox" id="2_4_1" name="15" value="yes">1
+		</div>
+		<div>
+			<input type="checkbox" id="2_4_2" name="16" value="yes">2
+		</div>
+		<div>
+			<input type="checkbox" id="2_4_3" name="17" value="yes">4
+		</div>
+		<div>
+			<input type="checkbox" id="2_4_4" name="18" value="yes">7
+		</div>
+	</section>
+
+		<section class="container">
+		<p>Вопрос 5</p>
+		<p>Чему будет равна переменная а?</p>
+
+		<section class="container">
+		<pre class="precode"><code>int x = 5;
+int z;
+bool y;
+double a = x * y + z;</code>
+		</pre>
+	</section>
+
+		<div>
+			<input type="checkbox" id="2_5_1" name="19" value="yes">5
+		</div>
+		<div>
+			<input type="checkbox" id="2_5_2" name="20" value="yes">4
+		</div>
+		<div>
+			<input type="checkbox" id="2_5_3" name="21" value="yes">false
+		</div>
+		<div>
+			<input type="checkbox" id="2_5_4" name="22" value="yes">Ошибка
+		</div>
+	</section>
+	<section class="container flex gap">
+		<button onclick="getAnswers2(); fun2();" class="container gap">Проверка</button>
+	</section>
+		</form>
+
+	<footer>
+		<div class="container flex gap">
+			<a href="Lessons1.html"><button>Перейти к уроку 1</button></a>
+			<a href="Lessons2.html"><button>Перейти к уроку 2</button></a>
+			<a href="Lessons3.html"><button>Перейти к уроку 3</button></a>
+			<a href="Lessons4.html"><button>Перейти к уроку 4</button></a>
+		</div>
+	</footer>
+</body>
+</html>

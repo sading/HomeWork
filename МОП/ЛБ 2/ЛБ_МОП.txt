@@ -1,0 +1,96 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LB_MOP_2
+{
+    internal class Program
+    {
+        public static int findMaxIndex(int[] array )
+        {
+            for (int i = array.Length-2; i >= 0; i--)
+            {
+                if (array[i] < array[i+1])
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        public static int findIndexBiggerElement(int[] array, int element)
+        {
+            for (int i = array.Length-1; i >= 0 ; i--)
+            {
+                if (array[i] > element)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        public static void swap(int[] array, int i, int j)
+        {
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+
+        public static void reverse(int[] array, int index)
+        {
+            int shift = index + 1;
+            for (int i = 0; i < (array.Length - shift)/2; i++)
+            {
+                int temp = array[shift + i];
+                array[shift + i] = array[array.Length - i - 1];
+                array[array.Length - i - 1] = temp;
+            }
+        
+        }
+
+        public static void Generator(int[] array)
+        {
+            int index = findMaxIndex(array);
+            while (index != -1)
+            {
+                for (int i = 0; i < array.Length; i++)
+                {
+                    Console.Write($"{array[i]} ");
+                }
+                Console.WriteLine();
+                int element = array[index];
+                int swapIndex = findIndexBiggerElement(array, element);
+                swap(array, index, swapIndex);
+                reverse(array, index);
+                index = findMaxIndex(array);
+            }
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write($"{array[i]} ");
+            }
+            Console.WriteLine();
+
+        }
+
+
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите количество элементов");
+            int Kol = int.Parse(Console.ReadLine());
+            int[] Array_Element = new int[Kol];
+
+            for (int i = 0; i < Array_Element.Length; i++)
+            {
+                Console.Write($"Введите {i+1} элемент -> ");
+                Array_Element[i] = int.Parse(Console.ReadLine());
+            }
+
+            Generator(Array_Element);
+            Console.ReadKey();
+        }
+    }
+}
